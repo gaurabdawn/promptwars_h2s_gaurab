@@ -13,6 +13,22 @@ In a crisis, data is never clean. Setu ingests "messy" real-world inputs—Hingl
 
 ## 🏗️ System Design Diagram
 
+# Project Setu (सेतु) 🌉
+
+### The Universal AI Bridge for Indian Societal Benefit
+
+[![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
+[![Gemini](https://img.shields.io/badge/Gemini_AI-8E75E5?style=for-the-badge&logo=google-gemini&logoColor=white)](https://deepmind.google/technologies/gemini/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+
+**Project Setu (सेतु)** is a Gemini-powered "Universal Bridge" designed to close the gap between chaotic, unstructured human intent and rigid, structured emergency/healthcare systems in India.
+
+In a crisis, data is never clean. Setu ingests "messy" real-world inputs — Hinglish voice notes, blurry prescription photos, or frantic disaster reports — and instantly converts them into **Structured, Verified, and Life-Saving Actions.**
+
+---
+
+## 🏗️ System Design Diagram
+
 ```mermaid
 graph LR
     subgraph "A. Agentic Development & Tuning"
@@ -48,7 +64,4 @@ graph LR
     style GC fill:#dfd,stroke:#333,stroke-width:4px
     style FS fill:#ffd,stroke:#333,stroke-width:2px
 
-**📜 Technical Writeup: Project Setu (सेतु)
-I. Project Philosophy
-Project Setu is engineered as a Universal Bridge to solve the "Impedance Mismatch" between human chaos and system structure. In the Indian societal context, emergency data is rarely clean; it is multimodal, vernacular, and high-entropy. Setu uses a Reasoning-over-Parsing approach to transform this chaos into machine-interoperable actions.
-II. Agentic Engineering with Antigravity & AI Studio
+
