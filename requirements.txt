@@ -3,6 +3,10 @@ google-generativeai>=0.7.0      # Gemini Pro/Flash API
 google-cloud-speech>=2.23.0    # Vernacular Voice-to-Text (Indian Dialects)
 google-cloud-translate>=3.12.0 # Regional language bridging
 google-cloud-vision>=3.4.4     # OCR for messy prescriptions/docs
+google-cloud-firestore
+google-cloud-storage
+google-cloud-secret-manager
+google-cloud-texttospeech
 
 # --- Backend & API (Efficiency) ---
 fastapi>=0.110.0               # High-performance async framework
