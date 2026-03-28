@@ -1,7 +1,3 @@
-This is the complete, high-fidelity `README.md` file for your repository. It integrates the technical architecture, the role of **Antigravity** and **AI Studio**, and the full deployment guide. 
-
-Copy and paste the entire block below:
-
 ***
 
 ```markdown
