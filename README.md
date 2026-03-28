@@ -51,43 +51,62 @@ graph LR
 
 ```
 
-
 ```mermaid
 graph LR
-    subgraph "A. Agentic Development & Tuning"
-        AS[Google AI Studio] -- "Prompt Prototyping" --> AG[Antigravity IDE]
-        AG -- ".antigravity/rules.md" --> DE[Agentic Code Refinement]
-        DE -- "Model Tuning" --> GC[Gemini 1.5/2.0 Flash]
+    subgraph A["A · Agentic Development & Tuning"]
+        AS["AI Studio\nPrompt prototyping"]
+        AG["Antigravity IDE\n.antigravity/rules.md"]
+        RE["Code Refinement\nAgentic iteration"]
+        AS --> AG --> RE
     end
 
-    subgraph "B. Multimodal Ingestion Layer"
-        UI[FastAPI / Jinja2 UI] --> SEC[PII Redactor: Regex/Logic]
-        SEC -- "Sanitized Payload" --> BRIDGE[main.py: SetuBridge]
+    subgraph B["B · Multimodal Ingestion Layer"]
+        UI["FastAPI / Jinja2\nWeb UI entry point"]
+        PII["PII Redactor\nRegex / logic sanitizer"]
+        SB["SetuBridge\nSanitized payload bridge"]
+        UI --> PII --> SB
     end
 
-    subgraph "C. Reasoning & Processing (The Bridge)"
-        BRIDGE -- "Singleton Session" --> GC
-        GC -- "Resilient JSON Parsing" --> PARSE[Data Transformer]
+    subgraph C["C · Reasoning & Processing — The Bridge"]
+        GC["Gemini 1.5 / 2.0 Flash\nSingleton session · model tuning"]
+        DT["Data Transformer\nResilient JSON parsing"]
+        GC --> DT
     end
 
-    subgraph "D. Cloud Native Persistence & Aux"
-        PARSE --> FS[(Cloud Firestore: NoSQL)]
-        PARSE --> GCS[Cloud Storage: Blob Persistence]
-        PARSE --> TTS[Cloud Text-to-Speech: i18n]
+    subgraph D["D · Cloud-Native Persistence & Aux"]
+        FS["Cloud Firestore\nNoSQL persistence"]
+        CS["Cloud Storage\nBlob persistence"]
+        TTS["Cloud TTS\ni18n audio synthesis"]
     end
 
-    subgraph "E. Actionable Egress"
-        PARSE --> OUT[Structured JSON Action]
-        OUT --> API[Third-Party Emergency APIs]
+    subgraph E["E · Actionable Egress"]
+        SJ["Structured JSON\nAction output"]
+        API["Emergency APIs\nThird-party egress"]
+        SJ --> API
     end
 
-    %% Data Flow Styling
-    style AS fill:#f9f,stroke:#333,stroke-width:2px
-    style AG fill:#bbf,stroke:#333,stroke-width:2px
-    style GC fill:#dfd,stroke:#333,stroke-width:4px
-    style FS fill:#ffd,stroke:#333,stroke-width:2px
+    %% Cross-lane connections
+    SB --> GC
+    RE -.->|Model tuning| GC
+    DT --> FS
+    DT --> CS
+    DT --> TTS
+    DT --> SJ
 
+    %% Styling
+    classDef purple fill:#EEEDFE,stroke:#7F77DD,color:#3C3489
+    classDef blue   fill:#E6F1FB,stroke:#378ADD,color:#0C447C
+    classDef teal   fill:#E1F5EE,stroke:#1D9E75,color:#085041
+    classDef amber  fill:#FAEEDA,stroke:#BA7517,color:#633806
+    classDef coral  fill:#FAECE7,stroke:#D85A30,color:#4A1B0C
+
+    class AS,AG,RE purple
+    class UI,PII,SB blue
+    class GC,DT teal
+    class FS,CS,TTS amber
+    class SJ,API coral
 ```
+
 
 ### 📜 Technical Writeup
 ## I. Project Philosophy
