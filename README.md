@@ -77,14 +77,16 @@ Text-to-Speech: Converts Hinglish summaries into audible instructions for access
 
 
 ### 🚀 Google Cloud Deployment (Production Guide)
-## Phase 1: Environment Preparation
+## 🔌Phase 1: Environment Preparation
 Enable required APIs:
-Bashgcloud services enable run.googleapis.com \
+```Bash
+gcloud services enable run.googleapis.com \
     cloudbuild.googleapis.com \
     firestore.googleapis.com \
     storage.googleapis.com \
     texttospeech.googleapis.com \
     secretmanager.googleapis.com
+```
 Infrastructure Setup:
 
 Firestore: Create a database in Native Mode in asia-south1 (Mumbai)
