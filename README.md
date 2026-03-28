@@ -51,61 +51,8 @@ graph LR
 
 ```
 
-```mermaid
-graph LR
-    subgraph A["A · Agentic Development & Tuning"]
-        AS["AI Studio\nPrompt prototyping"]
-        AG["Antigravity IDE\n.antigravity/rules.md"]
-        RE["Code Refinement\nAgentic iteration"]
-        AS --> AG --> RE
-    end
+<img width="353" height="313" alt="image" src="https://github.com/user-attachments/assets/45acac8a-f744-42b8-92e3-0c529d7a5409" />
 
-    subgraph B["B · Multimodal Ingestion Layer"]
-        UI["FastAPI / Jinja2\nWeb UI entry point"]
-        PII["PII Redactor\nRegex / logic sanitizer"]
-        SB["SetuBridge\nSanitized payload bridge"]
-        UI --> PII --> SB
-    end
-
-    subgraph C["C · Reasoning & Processing — The Bridge"]
-        GC["Gemini 1.5 / 2.0 Flash\nSingleton session · model tuning"]
-        DT["Data Transformer\nResilient JSON parsing"]
-        GC --> DT
-    end
-
-    subgraph D["D · Cloud-Native Persistence & Aux"]
-        FS["Cloud Firestore\nNoSQL persistence"]
-        CS["Cloud Storage\nBlob persistence"]
-        TTS["Cloud TTS\ni18n audio synthesis"]
-    end
-
-    subgraph E["E · Actionable Egress"]
-        SJ["Structured JSON\nAction output"]
-        API["Emergency APIs\nThird-party egress"]
-        SJ --> API
-    end
-
-    %% Cross-lane connections
-    SB --> GC
-    RE -.->|Model tuning| GC
-    DT --> FS
-    DT --> CS
-    DT --> TTS
-    DT --> SJ
-
-    %% Styling
-    classDef purple fill:#EEEDFE,stroke:#7F77DD,color:#3C3489
-    classDef blue   fill:#E6F1FB,stroke:#378ADD,color:#0C447C
-    classDef teal   fill:#E1F5EE,stroke:#1D9E75,color:#085041
-    classDef amber  fill:#FAEEDA,stroke:#BA7517,color:#633806
-    classDef coral  fill:#FAECE7,stroke:#D85A30,color:#4A1B0C
-
-    class AS,AG,RE purple
-    class UI,PII,SB blue
-    class GC,DT teal
-    class FS,CS,TTS amber
-    class SJ,API coral
-```
 
 
 ### 📜 Technical Writeup
