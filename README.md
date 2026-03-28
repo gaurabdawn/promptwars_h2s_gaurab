@@ -50,7 +50,7 @@ graph LR
     style FS fill:#ffd,stroke:#333,stroke-width:2px
 
 ```
-📜 Technical Writeup
+##📜 Technical Writeup
 I. Project Philosophy
 Project Setu is engineered as a Universal Bridge to solve the "Impedance Mismatch" between human chaos and system structure. In the Indian societal context, emergency data is rarely clean — it is multimodal, vernacular, and high-entropy.
 Setu uses a Reasoning-over-Parsing approach to transform this chaos into machine-interoperable, actionable outputs.
@@ -75,7 +75,7 @@ Text-to-Speech: Converts Hinglish summaries into audible instructions for access
 
 
 
-🚀 Google Cloud Deployment (Production Guide)
+##🚀 Google Cloud Deployment (Production Guide)
 Phase 1: Environment Preparation
 Enable required APIs:
 Bashgcloud services enable run.googleapis.com \
