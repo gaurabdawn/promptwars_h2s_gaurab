@@ -3,11 +3,12 @@
 ### The Universal AI Bridge for Indian Societal Benefit
 
 [![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
+[![Google AI Studio](https://img.shields.io/badge/Google_AI_Studio-1A73E8?style=for-the-badge&logo=google&logoColor=white)](https://aistudio.google.com/)
+[![Google Antigravity](https://img.shields.io/badge/Google_Antigravity-000000?style=for-the-badge&logo=google&logoColor=white)](https://antigravity.google/)
 [![Cloud Run](https://img.shields.io/badge/Cloud_Run-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/run)
 [![Firestore](https://img.shields.io/badge/Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![Gemini](https://img.shields.io/badge/Gemini_AI-8E75E5?style=for-the-badge&logo=google-gemini&logoColor=white)](https://deepmind.google/technologies/gemini/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Speech-to-Text](https://img.shields.io/badge/Speech--to--Text-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/speech-to-text)
 [![Text-to-Speech](https://img.shields.io/badge/Text--to--Speech-FF6F00?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/text-to-speech)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Cloud Build](https://img.shields.io/badge/Cloud_Build-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/build)
