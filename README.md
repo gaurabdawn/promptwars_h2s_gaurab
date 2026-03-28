@@ -51,7 +51,7 @@ graph LR
 
 ```
 
-<img width="553" height="313" alt="image" src="https://github.com/user-attachments/assets/45acac8a-f744-42b8-92e3-0c529d7a5409" />
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/45acac8a-f744-42b8-92e3-0c529d7a5409" />
 
 
 
