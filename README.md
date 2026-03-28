@@ -103,6 +103,19 @@ gcloud projects add-iam-policy-binding [PROJECT_ID] \
 gcloud projects add-iam-policy-binding [PROJECT_ID] \
     --member="serviceAccount:[SERVICE_ACCOUNT]" \
     --role="roles/cloudtts.admin"
+
+## 🚀 Phase 3: Deploy to Cloud Run
+
+Use the following command to deploy your application to **Google Cloud Run**:
+
+```bash
+gcloud run deploy project-setu \
+  --source . \
+  --region asia-south1 \
+  --allow-unauthenticated \
+  --clear-base-image \
+  --set-env-vars GOOGLE_API_KEY=[YOUR_KEY],GOOGLE_CLOUD_PROJECT=[YOUR_ID],GS_BUCKET_NAME=project-setu-media
+    
 ## Phase 3: Deploy to Cloud Run
 Bashgcloud run deploy project-setu \
   --source . \
