@@ -13,12 +13,11 @@ In a crisis, data is never clean. Setu ingests "messy" real-world inputs—Hingl
 
 ## 🏗️ System Design Diagram
 
-```mermaid
 graph LR
     subgraph "A. Agentic Development & Tuning"
         AS[Google AI Studio] -- "Prompt Prototyping" --> AG[Antigravity IDE]
         AG -- ".antigravity/rules.md" --> DE[Agentic Code Refinement]
-        DE -- "Model Quantization/Tuning" --> GC[Gemini 1.5/2.0 Flash]
+        DE -- "Model Tuning" --> GC[Gemini 1.5/2.0 Flash]
     end
 
     subgraph "B. Multimodal Ingestion Layer"
@@ -47,7 +46,6 @@ graph LR
     style AG fill:#bbf,stroke:#333,stroke-width:2px
     style GC fill:#dfd,stroke:#333,stroke-width:4px
     style FS fill:#ffd,stroke:#333,stroke-width:2px
-
 
 2. Technical Writeup: Project Setu (सेतु)
 I. Project Philosophy
