@@ -1,7 +1,24 @@
 # .gitignore
-.env
+# --- SECRETS (NEVER PUSH THESE) ---
+.antigravity/.env
+*.env
+secrets.json
+
+# --- PYTHON JUNK ---
 __pycache__/
 *.pyc
-.antigravity/
 venv/
+.venv/
+env/
+build/
+dist/
+
+# --- IDE & OS JUNK ---
+.vscode/
+.idea/
 .DS_Store
+Thumbs.db
+
+# --- KEEP THIS ---
+# Do NOT include .antigravity here. 
+# We WANT the agent rules on GitHub so others can tune the app.

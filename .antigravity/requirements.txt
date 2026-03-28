@@ -1,0 +1,17 @@
+# --- Core AI & Google Services ---
+google-generativeai>=0.7.0      # Gemini Pro/Flash API
+google-cloud-speech>=2.23.0    # Vernacular Voice-to-Text (Indian Dialects)
+google-cloud-translate>=3.12.0 # Regional language bridging
+google-cloud-vision>=3.4.4     # OCR for messy prescriptions/docs
+
+# --- Backend & API (Efficiency) ---
+fastapi>=0.110.0               # High-performance async framework
+uvicorn[standard]>=0.27.0      # ASGI server
+pydantic>=2.6.0                # Data validation/Structured Output schemas
+python-multipart>=0.0.9        # Handling file uploads (Voice/Images)
+
+# --- Utilities & Security ---
+python-dotenv>=1.0.1           # Environment variable management
+cryptography>=42.0.0           # Local PII encryption
+httpx>=0.27.0                  # Async HTTP client for external APIs (Bhashini/Traffic)
+Pillow>=10.2.0                 # Image preprocessing for messy photos
