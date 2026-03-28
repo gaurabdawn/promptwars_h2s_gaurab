@@ -5,6 +5,27 @@
 [![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
 [![Gemini](https://img.shields.io/badge/Gemini_AI-8E75E5?style=for-the-badge&logo=google-gemini&logoColor=white)](https://deepmind.google/technologies/gemini/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+## ⚙️ Tech Stack
+
+### ☁️ Cloud & Infrastructure
+[![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
+[![Cloud Run](https://img.shields.io/badge/Cloud_Run-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/run)
+[![Cloud Storage](https://img.shields.io/badge/Cloud_Storage-34A853?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/storage)
+[![Firestore](https://img.shields.io/badge/Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
+
+### 🤖 AI & Processing
+[![Gemini](https://img.shields.io/badge/Gemini_AI-8E75E5?style=for-the-badge&logo=google-gemini&logoColor=white)](https://deepmind.google/technologies/gemini/)
+[![Speech-to-Text](https://img.shields.io/badge/Speech--to--Text-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/speech-to-text)
+[![Text-to-Speech](https://img.shields.io/badge/Text--to--Speech-FF6F00?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/text-to-speech)
+[![Vision AI](https://img.shields.io/badge/Vision_AI-34A853?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/vision)
+
+### ⚡ Backend & APIs
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+
+### 🔐 Security & DevOps
+[![Secret Manager](https://img.shields.io/badge/Secret_Manager-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/secret-manager)
+[![Cloud Build](https://img.shields.io/badge/Cloud_Build-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/build)
 
 **Project Setu (सेतु)** is a Gemini-powered "Universal Bridge" designed to close the gap between chaotic, unstructured human intent and rigid, structured emergency/healthcare systems in India.
 
@@ -14,46 +35,7 @@ In a crisis, data is never clean. Setu ingests "messy" real-world inputs — Hin
 
 ## 🏗️ System Design Diagram
 
-```mermaid
-graph LR
-    subgraph "A. Agentic Development & Tuning"
-        AS[Google AI Studio] -- "Prompt Prototyping" --> AG[Antigravity IDE]
-        AG -- ".antigravity/rules.md" --> DE[Agentic Code Refinement]
-        DE -- "Model Tuning" --> GC[Gemini 1.5/2.0 Flash]
-    end
-
-    subgraph "B. Multimodal Ingestion Layer"
-        UI[FastAPI / Jinja2 UI] --> SEC[PII Redactor: Regex/Logic]
-        SEC -- "Sanitized Payload" --> BRIDGE[main.py: SetuBridge]
-    end
-
-    subgraph "C. Reasoning & Processing (The Bridge)"
-        BRIDGE -- "Singleton Session" --> GC
-        GC -- "Resilient JSON Parsing" --> PARSE[Data Transformer]
-    end
-
-    subgraph "D. Cloud Native Persistence & Aux"
-        PARSE --> FS[(Cloud Firestore: NoSQL)]
-        PARSE --> GCS[Cloud Storage: Blob Persistence]
-        PARSE --> TTS[Cloud Text-to-Speech: i18n]
-    end
-
-    subgraph "E. Actionable Egress"
-        PARSE --> OUT[Structured JSON Action]
-        OUT --> API[Third-Party Emergency APIs]
-    end
-
-    %% Data Flow Styling
-    style AS fill:#f9f,stroke:#333,stroke-width:2px
-    style AG fill:#bbf,stroke:#333,stroke-width:2px
-    style GC fill:#dfd,stroke:#333,stroke-width:4px
-    style FS fill:#ffd,stroke:#333,stroke-width:2px
-
-```
-
 <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/45acac8a-f744-42b8-92e3-0c529d7a5409" />
-
-
 
 ### 📜 Technical Writeup
 ## I. Project Philosophy
