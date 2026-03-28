@@ -50,11 +50,12 @@ graph LR
     style FS fill:#ffd,stroke:#333,stroke-width:2px
 
 ```
-##📜 Technical Writeup
-I. Project Philosophy
+
+### 📜 Technical Writeup
+## I. Project Philosophy
 Project Setu is engineered as a Universal Bridge to solve the "Impedance Mismatch" between human chaos and system structure. In the Indian societal context, emergency data is rarely clean — it is multimodal, vernacular, and high-entropy.
 Setu uses a Reasoning-over-Parsing approach to transform this chaos into machine-interoperable, actionable outputs.
-II. Agentic Engineering with Antigravity & Google AI Studio
+## II. Agentic Engineering with Antigravity & Google AI Studio
 The intelligence of Setu was developed using a dual-loop AI feedback system:
 
 Google AI Studio: Used for rapid prototyping of system instructions and multimodal testing (blurry Indian medical prescriptions, noisy Hindi audio transcripts, etc.).
@@ -63,7 +64,7 @@ Singleton Pattern for Gemini initialization
 Zero-Strictness Pydantic models for robust high-stakes data ingestion
 
 
-III. Core Architectural Pillars
+## III. Core Architectural Pillars
 
 Multimodal Reasoning Engine: Powered by Gemini 1.5 / 2.0 Flash via the v1beta API. Chosen for high tokens-per-second and low latency — critical for life-saving triage.
 PII Sanitization (The Shield): Pre-processing layer in core/security.py redacts sensitive Indian identifiers (Aadhaar, PAN, Mobile) using optimized regex patterns before the payload leaves application memory.
@@ -75,8 +76,8 @@ Text-to-Speech: Converts Hinglish summaries into audible instructions for access
 
 
 
-##🚀 Google Cloud Deployment (Production Guide)
-Phase 1: Environment Preparation
+### 🚀 Google Cloud Deployment (Production Guide)
+## Phase 1: Environment Preparation
 Enable required APIs:
 Bashgcloud services enable run.googleapis.com \
     cloudbuild.googleapis.com \
@@ -89,7 +90,7 @@ Infrastructure Setup:
 Firestore: Create a database in Native Mode in asia-south1 (Mumbai)
 Storage Bucket:Bashgsutil mb -l asia-south1 gs://project-setu-media
 
-Phase 2: IAM & Security Configuration
+## Phase 2: IAM & Security Configuration
 Assign roles to the Cloud Run service account:
 Bashgcloud projects add-iam-policy-binding [PROJECT_ID] \
     --member="serviceAccount:[SERVICE_ACCOUNT]" \
@@ -102,19 +103,19 @@ gcloud projects add-iam-policy-binding [PROJECT_ID] \
 gcloud projects add-iam-policy-binding [PROJECT_ID] \
     --member="serviceAccount:[SERVICE_ACCOUNT]" \
     --role="roles/cloudtts.admin"
-Phase 3: Deploy to Cloud Run
+## Phase 3: Deploy to Cloud Run
 Bashgcloud run deploy project-setu \
   --source . \
   --region asia-south1 \
   --allow-unauthenticated \
   --clear-base-image \
   --set-env-vars GOOGLE_API_KEY=[YOUR_KEY],GOOGLE_CLOUD_PROJECT=[YOUR_ID],GS_BUCKET_NAME=project-setu-media
-Phase 4: Post-Deployment Verification
+## Phase 4: Post-Deployment Verification
 
 Health Check: https://[URL]/health
 UI: https://[URL]/ (High-contrast Setu form)
 API Docs: https://[URL]/docs
 
 
-🔗 Live Deployment
+### 🔗 Live Deployment
 Deployed Link: https://project-setu-32372428108.asia-south1.run.app
