@@ -1,5 +1,3 @@
-***
-
 ```markdown
 # Project Setu (सेतु) 🌉
 ### The Universal AI Bridge for Indian Societal Benefit
