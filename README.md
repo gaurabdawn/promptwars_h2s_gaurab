@@ -47,3 +47,8 @@ graph LR
     style AG fill:#bbf,stroke:#333,stroke-width:2px
     style GC fill:#dfd,stroke:#333,stroke-width:4px
     style FS fill:#ffd,stroke:#333,stroke-width:2px
+
+**📜 Technical Writeup: Project Setu (सेतु)
+I. Project Philosophy
+Project Setu is engineered as a Universal Bridge to solve the "Impedance Mismatch" between human chaos and system structure. In the Indian societal context, emergency data is rarely clean; it is multimodal, vernacular, and high-entropy. Setu uses a Reasoning-over-Parsing approach to transform this chaos into machine-interoperable actions.
+II. Agentic Engineering with Antigravity & AI Studio
