@@ -87,10 +87,17 @@ gcloud services enable run.googleapis.com \
     texttospeech.googleapis.com \
     secretmanager.googleapis.com
 ```
-Infrastructure Setup:
+## 🏗️ Infrastructure Setup
+📂 Firestore
+Create a Firestore database in:
+Mode: Native
+Region: asia-south1 (Mumbai)
 
-Firestore: Create a database in Native Mode in asia-south1 (Mumbai)
-Storage Bucket:Bashgsutil mb -l asia-south1 gs://project-setu-media
+🪣 Cloud Storage Bucket
+Create a storage bucket for media assets:
+```bash
+gsutil mb -l asia-south1 gs://project-setu-media
+```
 
 ## Phase 2: IAM & Security Configuration
 Assign roles to the Cloud Run service account:
