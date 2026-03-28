@@ -92,7 +92,8 @@ Storage Bucket:Bashgsutil mb -l asia-south1 gs://project-setu-media
 
 ## Phase 2: IAM & Security Configuration
 Assign roles to the Cloud Run service account:
-Bashgcloud projects add-iam-policy-binding [PROJECT_ID] \
+```bash
+gcloud projects add-iam-policy-binding [PROJECT_ID] \
     --member="serviceAccount:[SERVICE_ACCOUNT]" \
     --role="roles/datastore.user"
 
@@ -103,7 +104,7 @@ gcloud projects add-iam-policy-binding [PROJECT_ID] \
 gcloud projects add-iam-policy-binding [PROJECT_ID] \
     --member="serviceAccount:[SERVICE_ACCOUNT]" \
     --role="roles/cloudtts.admin"
-
+```
 ## 🚀 Phase 3: Deploy to Cloud Run
 
 Use the following command to deploy your application to **Google Cloud Run**:
@@ -120,7 +121,9 @@ gcloud run deploy project-setu \
 ## ✅Phase 4: Post-Deployment Verification
 
 👉 Health Check: https://[URL]/health
+
 👉 UI: https://[URL]/ (High-contrast Setu form)
+
 👉 API Docs: https://[URL]/docs
 
 
