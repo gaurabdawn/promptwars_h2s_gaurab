@@ -51,6 +51,44 @@ graph LR
 
 ```
 
+
+```mermaid
+graph LR
+    subgraph "A. Agentic Development & Tuning"
+        AS[Google AI Studio] -- "Prompt Prototyping" --> AG[Antigravity IDE]
+        AG -- ".antigravity/rules.md" --> DE[Agentic Code Refinement]
+        DE -- "Model Tuning" --> GC[Gemini 1.5/2.0 Flash]
+    end
+
+    subgraph "B. Multimodal Ingestion Layer"
+        UI[FastAPI / Jinja2 UI] --> SEC[PII Redactor: Regex/Logic]
+        SEC -- "Sanitized Payload" --> BRIDGE[main.py: SetuBridge]
+    end
+
+    subgraph "C. Reasoning & Processing (The Bridge)"
+        BRIDGE -- "Singleton Session" --> GC
+        GC -- "Resilient JSON Parsing" --> PARSE[Data Transformer]
+    end
+
+    subgraph "D. Cloud Native Persistence & Aux"
+        PARSE --> FS[(Cloud Firestore: NoSQL)]
+        PARSE --> GCS[Cloud Storage: Blob Persistence]
+        PARSE --> TTS[Cloud Text-to-Speech: i18n]
+    end
+
+    subgraph "E. Actionable Egress"
+        PARSE --> OUT[Structured JSON Action]
+        OUT --> API[Third-Party Emergency APIs]
+    end
+
+    %% Data Flow Styling
+    style AS fill:#f9f,stroke:#333,stroke-width:2px
+    style AG fill:#bbf,stroke:#333,stroke-width:2px
+    style GC fill:#dfd,stroke:#333,stroke-width:4px
+    style FS fill:#ffd,stroke:#333,stroke-width:2px
+
+```
+
 ### 📜 Technical Writeup
 ## I. Project Philosophy
 Project Setu is engineered as a Universal Bridge to solve the "Impedance Mismatch" between human chaos and system structure. In the Indian societal context, emergency data is rarely clean — it is multimodal, vernacular, and high-entropy.
