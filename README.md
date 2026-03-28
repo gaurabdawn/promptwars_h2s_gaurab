@@ -14,32 +14,36 @@ In a crisis, data is never clean. Setu ingests "messy" real-world inputs—Hingl
 ## 🏗️ System Design Diagram
 
 ```mermaid
-graph TD
-    subgraph "1. Multimodal Ingestion (The Mess)"
-        A[User Intent: Voice/Text/Hinglish] --> D[Setu Gateway]
-        B[Evidence: Accident Photos/Prescriptions] --> D
+graph LR
+    subgraph "A. Agentic Development & Tuning"
+        AS[Google AI Studio] -- "Prompt Prototyping" --> AG[Antigravity IDE]
+        AG -- ".antigravity/rules.md" --> DE[Agentic Code Refinement]
+        DE -- "Model Quantization/Tuning" --> GC[Gemini 1.5/2.0 Flash]
     end
 
-    subgraph "2. Security & Perception (The Shield)"
-        D --> E[FastAPI /main.py]
-        E --> F[SetuSecurity: PII Redaction]
-        F -- "Masked Aadhaar/PAN/Phone" --> G[Gemini 1.5/2.0 Flash]
+    subgraph "B. Multimodal Ingestion Layer"
+        UI[FastAPI / Jinja2 UI] --> SEC[PII Redactor: Regex/Logic]
+        SEC -- "Sanitized Payload" --> BRIDGE[main.py: SetuBridge]
     end
 
-    subgraph "3. Reasoning Core (The Bridge)"
-        G -- "Contextual Reasoning" --> H{Action Logic}
-        H -- "Medical" --> I[ABDM Mapping]
-        H -- "Disaster" --> J[112/NDRF Logic]
-        H -- "Public Safety" --> K[Metro/CISF Logic]
+    subgraph "C. Reasoning & Processing (The Bridge)"
+        BRIDGE -- "Singleton Session" --> GC
+        GC -- "Resilient JSON Parsing" --> PARSE[Data Transformer]
     end
 
-    subgraph "4. Google Cloud Infrastructure (The Scale)"
-        H --> L[Cloud Storage: Evidence Persistence]
-        H --> M[Firestore: Incident Tracking]
-        H --> N[Cloud TTS: Accessibility Voice Output]
+    subgraph "D. Cloud Native Persistence & Aux"
+        PARSE --> FS[(Cloud Firestore: NoSQL)]
+        PARSE --> GCS[Cloud Storage: Blob Persistence]
+        PARSE --> TTS[Cloud Text-to-Speech: i18n]
     end
 
-    subgraph "5. Structured Output (The Action)"
-        N --> O[Structured JSON Action]
-        M --> P[Responder Dashboard]
+    subgraph "E. Actionable Egress"
+        PARSE --> OUT[Structured JSON Action]
+        OUT --> API[Third-Party Emergency APIs]
     end
+
+    %% Data Flow Styling
+    style AS fill:#f9f,stroke:#333,stroke-width:2px
+    style AG fill:#bbf,stroke:#333,stroke-width:2px
+    style GC fill:#dfd,stroke:#333,stroke-width:4px
+    style FS fill:#ffd,stroke:#333,stroke-width:2px
